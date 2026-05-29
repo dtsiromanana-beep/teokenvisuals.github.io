@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Teoken Visuals &mdash; Photographe Professionnel</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════ NAVBAR ════ -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="nav-logo">Teoken Visuals</a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#about">À propos</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- ════ HERO ════ -->
+  <section class="hero" id="home">
+    <!-- Panneaux latéraux (descendent à l'entrée) -->
+    <div class="hero-strip-l"></div>
+    <div class="hero-strip-r"></div>
+    <!-- Barres séparatrices -->
+    <div class="hero-sep-l"></div>
+    <div class="hero-sep-r"></div>
+    <!-- Panneau central (monte à l'entrée) -->
+    <div class="hero-center-wrap">
+      <div class="hero-bg"></div>
+      <div class="hero-overlay"></div>
+    </div>
+    <!-- Textes éditoriaux -->
+    <div class="hero-editorial">
+      <div class="hero-meta">
+        <span>Photographe Professionnel</span>
+        <span>Fianarantsoa, Madagascar</span>
+      </div>
+      <p class="hero-art-de">L&rsquo;art de</p>
+      <h1 class="hero-capturer"><em>capturer.</em></h1>
+      <p class="hero-instant">l&rsquo;instant parfait</p>
+      <a href="#portfolio" class="btn-hero hero-cta-btn">Voir le portfolio</a>
+    </div>
+    <div class="hero-scroll">
+      <div class="scroll-comet"></div>
+    </div>
+  </section>
+
+  <!-- ════ INTRO STRIP ════ -->
+  <section class="intro-strip">
+    <div class="strip-item" data-animate>
+      <span class="strip-num">2+</span>
+      <span class="strip-label">Ans d&rsquo;exp&eacute;rience</span>
+    </div>
+    <div class="strip-divider"></div>
+    <div class="strip-item" data-animate data-delay="150">
+      <span class="strip-num">200+</span>
+      <span class="strip-label">Clients satisfaits</span>
+    </div>
+    <div class="strip-divider"></div>
+    <div class="strip-item" data-animate data-delay="300">
+      <span class="strip-num">120+</span>
+      <span class="strip-label">Photos au portfolio</span>
+    </div>
+  </section>
+
+  <!-- ════ PORTFOLIO ════ -->
+  <section class="portfolio-section" id="portfolio">
+
+    <!-- Category panels (full-screen, one per category) -->
+    <div class="cat-panels">
+      <div class="cat-panel">
+        <div class="cat-bg" style="background-image:url('images/photo-1.jpg')"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <h2 class="cat-title">Portrait</h2>
+          <button class="cat-view-btn" data-filter="portrait">view</button>
+        </div>
+      </div>
+      <div class="cat-panel">
+        <div class="cat-bg" style="background-image:url('images/photo-64.jpg')"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <h2 class="cat-title">Mode</h2>
+          <button class="cat-view-btn" data-filter="mode">view</button>
+        </div>
+      </div>
+      <div class="cat-panel">
+        <div class="cat-bg" style="background-image:url('images/photo-5.jpg')"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <h2 class="cat-title">Nature</h2>
+          <button class="cat-view-btn" data-filter="nature">view</button>
+        </div>
+      </div>
+      <div class="cat-panel">
+        <div class="cat-bg" style="background-image:url('images/photo-7.jpg')"></div>
+        <div class="cat-overlay"></div>
+        <div class="cat-content">
+          <h2 class="cat-title">Street</h2>
+          <button class="cat-view-btn" data-filter="street">view</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery grid — populated by main.js -->
+    <div class="gallery-area" id="gallery-area">
+      <div class="gallery-area-header" data-animate>
+        <p class="section-eyebrow">Mon travail</p>
+        <h2 class="section-title">Portfolio</h2>
+      </div>
+      <div class="filter-tabs" data-animate>
+        <button class="filter-tab active" data-filter="all">Tout</button>
+        <button class="filter-tab" data-filter="portrait">Portrait</button>
+        <button class="filter-tab" data-filter="mode">Mode</button>
+        <button class="filter-tab" data-filter="nature">Nature</button>
+        <button class="filter-tab" data-filter="street">Street</button>
+      </div>
+      <div class="gallery-carousel-outer">
+        <div class="gallery-carousel" id="gallery"></div>
+      </div>
+      <div class="gallery-dots" id="gallery-dots"></div>
+    </div>
+  </section>
+
+  <!-- ════ ABOUT ════ -->
+  <section class="about-section" id="about">
+    <div class="about-img-col" data-animate data-dir="left">
+      <div class="about-img-wrap">
+        <img src="images/photographer.jpg" alt="Teoken Visuals photographe" />
+        <div class="about-badge">
+          <span class="badge-num">2</span>
+          <span class="badge-text">ans de passion</span>
+        </div>
+      </div>
+    </div>
+    <div class="about-text-col" data-animate data-dir="right">
+      <p class="section-eyebrow">&Agrave; propos</p>
+      <h2 class="section-title">Bonjour, je suis<br /><em>Teoken Visuals</em></h2>
+      <p>Photographe professionnel passionn&eacute;, je capture des moments authentiques &agrave; travers mes objectifs. En 2 ans, j&rsquo;ai d&eacute;velopp&eacute; un style unique centr&eacute; sur l&rsquo;&eacute;motion, la lumi&egrave;re et la composition.</p>
+      <p>Chaque image que je cr&eacute;e raconte une histoire unique &mdash; la v&ocirc;tre. Je travaille avec passion et un sens aigu du d&eacute;tail pour capturer ces instants qui durent toute une vie.</p>
+      <div class="about-skills">
+        <div class="skill-item">
+          <span class="skill-name">Portrait</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:95%"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Mode</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:85%"></div></div>
+        </div>
+        <div class="skill-item">
+          <span class="skill-name">Retouche</span>
+          <div class="skill-bar"><div class="skill-fill" style="--w:92%"></div></div>
+        </div>
+      </div>
+      <a href="#contact" class="btn-outline">Travailler ensemble</a>
+    </div>
+  </section>
+
+  <!-- ════ SERVICES ════ -->
+  <section class="services-section" id="services">
+    <div class="section-header" data-animate>
+      <p class="section-eyebrow">Ce que je propose</p>
+      <h2 class="section-title">Services</h2>
+    </div>
+    <div class="services-grid">
+
+      <div class="service-card featured" data-animate>
+        <div class="service-badge-top">Populaire</div>
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <h3>Portraits</h3>
+        <p>Portraits professionnels, familiaux ou artistiques en studio ou en ext&eacute;rieur. Mise en valeur de votre personnalit&eacute; unique.</p>
+        <p class="service-price">D&egrave;s 250&euro;</p>
+        <a href="#contact" class="service-link">R&eacute;server &rsaquo;</a>
+      </div>
+
+      <div class="service-card" data-animate data-delay="100">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
+        <h3>Mode &amp; Pub</h3>
+        <p>Shootings mode, lookbooks, campagnes publicitaires. Images &agrave; fort impact pour valoriser votre marque et vos produits.</p>
+        <p class="service-price">D&egrave;s 800&euro;</p>
+        <a href="#contact" class="service-link">R&eacute;server &rsaquo;</a>
+      </div>
+
+      <div class="service-card" data-animate data-delay="200">
+        <div class="service-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        </div>
+        <h3>Architecture</h3>
+        <p>Photographie d&rsquo;int&eacute;rieur et d&rsquo;ext&eacute;rieur pour agences immobili&egrave;res, architectes et h&ocirc;tels de luxe.</p>
+        <p class="service-price">D&egrave;s 400&euro;</p>
+        <a href="#contact" class="service-link">R&eacute;server &rsaquo;</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════ TESTIMONIALS ════ -->
+  <section class="testimonials-section">
+    <div class="section-header" data-animate>
+      <p class="section-eyebrow">T&eacute;moignages</p>
+      <h2 class="section-title">Ce qu&rsquo;ils disent</h2>
+    </div>
+    <div class="testimonials-track" id="testi-track">
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&laquo;&nbsp;Un travail bluffant. Mon shooting portrait a captur&eacute; une version de moi que je n&rsquo;avais jamais vue auparavant. Chaque photo raconte quelque chose de vrai.&nbsp;&raquo;</p>
+        <div class="testi-author">
+          <div class="testi-avatar">C</div>
+          <div>
+            <strong>Chlo&eacute; M.</strong>
+            <span>Portrait lifestyle 2024</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&laquo;&nbsp;Un professionnel exceptionnel. Mon shooting portrait a d&eacute;pass&eacute; toutes mes attentes. Je recommande sans h&eacute;siter &agrave; quiconque recherche la qualit&eacute;.&nbsp;&raquo;</p>
+        <div class="testi-author">
+          <div class="testi-avatar">A</div>
+          <div>
+            <strong>Amandine R.</strong>
+            <span>Portrait professionnel</span>
+          </div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p>&laquo;&nbsp;Notre campagne de mode a &eacute;t&eacute; r&eacute;alis&eacute;e avec une cr&eacute;ativit&eacute; et une rigueur remarquables. Lucas comprend parfaitement l&rsquo;univers de la marque.&nbsp;&raquo;</p>
+        <div class="testi-author">
+          <div class="testi-avatar">J</div>
+          <div>
+            <strong>Jean-Baptiste D.</strong>
+            <span>Directeur cr&eacute;atif, Maison Aurore</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-dots" id="testi-dots">
+      <button class="testi-dot active" onclick="goTesti(0)"></button>
+      <button class="testi-dot" onclick="goTesti(1)"></button>
+      <button class="testi-dot" onclick="goTesti(2)"></button>
+    </div>
+  </section>
+
+  <!-- ════ CONTACT ════ -->
+  <section class="contact-section" id="contact">
+    <div class="contact-left" data-animate data-dir="left">
+      <p class="section-eyebrow">Me contacter</p>
+      <h2 class="section-title">Parlons de<br /><em>votre projet</em></h2>
+      <div class="contact-info">
+        <div class="contact-info-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <span>Fianarantsoa, Madagascar</span>
+        </div>
+        <div class="contact-info-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.73a16 16 0 0 0 5.5 5.5l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+261 38 05 543 49</span>
+        </div>
+        <div class="contact-info-row">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          <span>teokenvisuals@gmail.com</span>
+        </div>
+      </div>
+      <div class="social-links">
+        <a href="https://www.instagram.com/teokenvisuals?igsh=eGU5dmM5bHRpNmEy&utm_source=qr" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://www.facebook.com/share/17MfkzVsMJ/?mibextid=wwXIfr" target="_blank" rel="noopener" class="social-link" aria-label="Facebook">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+        <a href="https://www.tiktok.com/@teoken_visual?_r=1&amp;_t=ZS-95lvfnt8EOu" target="_blank" rel="noopener" class="social-link" aria-label="TikTok">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/teoken-visuals-b51a853a5?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+      </div>
+    </div>
+    <div class="contact-right" data-animate data-dir="right">
+      <form class="contact-form" onsubmit="handleContactSubmit(event)">
+        <div class="form-row-2">
+          <div class="cf-group">
+            <input type="text" placeholder="Votre pr&eacute;nom" required />
+          </div>
+          <div class="cf-group">
+            <input type="text" placeholder="Votre nom" required />
+          </div>
+        </div>
+        <div class="cf-group">
+          <input type="email" placeholder="Votre adresse email" required />
+        </div>
+        <div class="cf-group">
+          <select>
+            <option value="" disabled selected>Type de prestation</option>
+            <option>Portrait</option>
+            <option>Mode &amp; Publicit&eacute;</option>
+            <option>Architecture</option>
+            <option>Autre</option>
+          </select>
+        </div>
+        <div class="cf-group">
+          <textarea placeholder="D&eacute;crivez votre projet..." rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-submit-photo">Envoyer le message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ════ FOOTER ════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <p class="footer-logo">Teoken Visuals</p>
+      <p class="footer-tagline">Photographe Professionnel &bull; Fianarantsoa, Madagascar</p>
+    </div>
+    <div class="footer-nav">
+      <a href="#portfolio">Portfolio</a>
+      <a href="#about">&Agrave; propos</a>
+      <a href="#services">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <p class="footer-copy">&copy; 2025 Teoken Visuals. Tous droits r&eacute;serv&eacute;s.</p>
+  </footer>
+
+  <!-- ════ LIGHTBOX ════ -->
+  <div class="lightbox" id="lightbox">
+    <button class="lb-close" onclick="closeLightbox()">&times;</button>
+    <button class="lb-prev" onclick="lbNav(-1)">&#8249;</button>
+    <button class="lb-next" onclick="lbNav(1)">&#8250;</button>
+    <div class="lb-img-wrap">
+      <img id="lb-img" src="" alt="" />
+    </div>
+    <p class="lb-caption" id="lb-caption"></p>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
